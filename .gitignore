@@ -1,0 +1,72 @@
+# compiled output
+/dist
+/tmp
+
+# dependencies
+/node_modules
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# Visual Studio artifacts
+.vscode
+.vscode/*
+.vs
+.vs/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+bin
+obj
+release
+debug
+obj/*
+bin/*
+release/*
+debug/*
+*.tmp
+*.user
+*.suo
+*.vsp
+*.csproj.VisualState.xml
+*.exe
+*.pdb
+*.vspscc
+*.vssscc
+*.Publish.xml
+*.cache
+*.dgml
+
+# Resharper artifacts
+_ReSharper.*
+*.resharper
+
+# Tests
+*.testsettings
+*.vsmdi
+*.testsettings
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+logs
+logs/*
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
