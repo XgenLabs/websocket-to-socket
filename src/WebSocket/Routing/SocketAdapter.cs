@@ -244,14 +244,6 @@ namespace WebSocket.Routing
         }
     }
 
-    public static class Constants
-    {
-        public static class Encoding
-        {
-            public static readonly System.Text.Encoding ISO_8859_1 = System.Text.Encoding.GetEncoding("iso-8859-1");
-        }
-    }
-
     public class TaskRunner
     {
         private readonly Task[] _tasks;
