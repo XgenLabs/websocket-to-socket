@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebSocket.Hubs;
+using WebSocket.Routing;
 
 namespace WebSocket
 {
@@ -36,6 +37,10 @@ namespace WebSocket
                 options.KeepAliveInterval = TimeSpan.FromSeconds(5);
             });
             services.AddLogging();
+
+            services.AddTransient<ServiceFactory>(provider => provider.GetService);
+            services.AddTransient<ComunicationManager>();
+            services.AddTransient<ResilientCommunicationManager>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

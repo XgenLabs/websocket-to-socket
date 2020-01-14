@@ -15,19 +15,28 @@ export class ChatComponent implements OnInit {
   constructor(private window: WindowRefService) { }
 
   ngOnInit() {
-    let username: string
+    // let username: string
 
-    do {
-      username = this.window.browserWindow.prompt('What\'s your name?')
-    } while (!username)
+    // do {
+    //   username = this.window.browserWindow.prompt('What\'s your name?')
+    // } while (!username)
 
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl(`http://localhost:5000/chat?username=${username}`)
+      .withUrl(`http://localhost:5000/chat?username=john.doe`)
+      .configureLogging(signalR.LogLevel.Debug)
       .build()
+
+    this.hubConnection.onclose(error => console.log('disconnected from the server.', error))
 
     this.hubConnection
       .start()
-      .then(() => console.log('Connection started'))
+      .then(connection => {
+        console.log('Connection started')
+      })
       .catch(err => console.log('Error while starting connection: ' + err))
+
+      this.hubConnection.on("Update", (message) => {
+        console.log(`(${new Date().toISOString()}) new message from server: ${message}`);
+      });
   }
 }
