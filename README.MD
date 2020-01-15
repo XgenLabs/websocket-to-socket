@@ -24,7 +24,7 @@ This example was built how to create a tunnel between a websocket connection to 
   ng serve
   ```
 
-2. **TCP Server**
+2. **Socket Server**
   ```bash
   dotnet restore && donet run
   ```
