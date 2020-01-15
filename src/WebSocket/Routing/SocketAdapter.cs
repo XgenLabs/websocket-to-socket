@@ -277,7 +277,7 @@ namespace WebSocket.Routing
 
             if (false == isCompleted) // At least one task is incomplete
             {
-                await Task.Delay(15 * 1_000); // wait for 15s before force 
+                await Task.Delay(10 * 1_000); // wait for 10s before force 
             }
 
             foreach (var task in _tasks)
