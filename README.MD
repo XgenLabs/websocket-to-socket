@@ -4,7 +4,7 @@ layout: Doc
 -->
 # Objective
 
-This is an example to demonstrate how to create a tunnel between a websocket connection to a socket connection with support to send and receive data on both sides.
+Demonstrate how to create a tunnel between a websocket connection to a socket connection with support to send and receive data on both sides.
 
 ## Use-cases
 
